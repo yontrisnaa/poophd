@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Rewrite untuk URL yang sesuai aturan
+RewriteRule ^d/(.*)$ view.php?id=$1 [L,QSA]
+
+# Redirect jika URL tidak cocok dengan aturan di atas
+ErrorDocument 404 /index.php
